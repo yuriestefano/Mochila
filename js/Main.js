@@ -9,8 +9,8 @@ form.addEventListener("submit", (event) =>{
 })
 
 function criaElemento(nome, quantidade){
-console.log(nome)
-console.log(quantidade)
+
+
 const novoItem= document.createElement('li')
 novoItem.classList.add('item')
 
@@ -18,7 +18,12 @@ novoItem.classList.add('item')
 const numeroItem= document.createElement('strong')
 numeroItem.innerHTML = quantidade
 
-novoItem.innerHTML=numeroItem + nome
+novoItem.appendChild(numeroItem)
+novoItem.innerHTML += nome
+
+const lista= document.getElementById("lista")
+
+lista.appendChild(novoItem)
 
 console.log(novoItem)
 }
