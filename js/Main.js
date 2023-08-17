@@ -36,4 +36,8 @@ const lista= document.getElementById("lista2")
 lista.appendChild(novoItem)
 
 console.log(novoItem)
+
+localStorage.setItem("novoItem", "numeroItem")
+
+
 }
